@@ -1,0 +1,221 @@
+ PEST3
+ resonant poloidal mode    ms = 1
+ toroidal mode             n  = 1
+ number of finite elements mm = 100 
+ Fourier modes -10, ..., 10
+ normalized wall distance  b  = 0
+ input file is inp1.cdf
+ keep theta orientation in getDelta
+ keep theta orientation in getQDeltaQ
+ Average Grad Shafranov solution error->0.000265163
+ Equilibrium q axis/edge-> 0.935514/2.39749
+ Equilibrium q min /max -> 0.935514/2.39749
+ keep theta orientation in getDelta
+ keep theta orientation in getQDeltaQ
+ ==========================================================
+ equilibrium grid dimension 64*202
+ minor/major radius     = 0.34/1 =0.34
+ R-magnetic             = 1.021
+ elongation             = 1.00012
+ triangularity          = -8.64482e-07
+ q axis/edge            = 0.935514/2.39749
+ q min/max              = 0.935514/2.39749
+ beta-poloidal          = 0
+ beta-toroidal          = 0
+ beta-N                 = 0
+ B0^2                   = 1
+ li                     = 1.11851
+ Ip                     = 0.350039
+0 ideal instabilitie(s)
+ ==========================================================
+0  Rat. surf. psi/psi_a = 0.00988017/0.0466927
+    safety factor       = 1
+    sqrt(-D_I)          = 0.5
+    Mercier D_R         = 0
+    <rs d psi/d r>      = 1.96099 (estimate)
+    Lambdas [psi_s norm]= -0.0629037
+0 0 psi_s^(2 mu) Delta' = 0.14578 + i 1.99622e-09 +/- 0
+0 0 psi_s^(2 mu) Gamma' = -4.59219 + i -1.4713e-06 +/- 0
+ ----------------------------------------------------------
+ PEST3
+ resonant poloidal mode    ms = 1
+ toroidal mode             n  = 1
+ number of finite elements mm = 100 50 70 140 
+ Fourier modes -10, ..., 10
+ normalized wall distance  b  = 0
+ input file is inp1.cdf
+ keep theta orientation in getDelta
+ keep theta orientation in getQDeltaQ
+ Average Grad Shafranov solution error->0.000265163
+ Equilibrium q axis/edge-> 0.935514/2.39749
+ Equilibrium q min /max -> 0.935514/2.39749
+ keep theta orientation in getDelta
+ keep theta orientation in getQDeltaQ
+ keep theta orientation in getDelta
+ keep theta orientation in getQDeltaQ
+ keep theta orientation in getDelta
+ keep theta orientation in getQDeltaQ
+ keep theta orientation in getDelta
+ keep theta orientation in getQDeltaQ
+ ==========================================================
+ equilibrium grid dimension 64*282
+ minor/major radius     = 0.34/1 =0.34
+ R-magnetic             = 1.021
+ elongation             = 1.00012
+ triangularity          = -8.64482e-07
+ q axis/edge            = 0.935514/2.39749
+ q min/max              = 0.935514/2.39749
+ beta-poloidal          = 0
+ beta-toroidal          = 0
+ beta-N                 = 0
+ B0^2                   = 1
+ li                     = 1.11852
+ Ip                     = 0.350039
+0 ideal instabilitie(s)
+ ==========================================================
+0  Rat. surf. psi/psi_a = 0.00988017/0.0466927
+    safety factor       = 1
+    sqrt(-D_I)          = 0.5
+    Mercier D_R         = 0
+    <rs d psi/d r>      = 1.96099 (estimate)
+    Lambdas [psi_s norm]= -0.0643548
+0 0 psi_s^(2 mu) Delta' = 0.387479 + i 1.72434e-09 +/- 0.0349418
+0 0 psi_s^(2 mu) Gamma' = -4.4527 + i -2.64853e-06 +/- 0.0357372
+ ----------------------------------------------------------
+ Rational surface no. 1 will be skipped
+ Rational surface no. 2 will be added
+ Rational surface no. 3 will be added
+ Rational surface no. 4 will be skipped
+ PEST3
+ resonant poloidal mode    ms = 0
+ toroidal mode             n  = 2
+ number of finite elements mm = 100 
+ Fourier modes -10, ..., 10
+ normalized wall distance  b  = 0
+ input file is inp1.cdf
+ keep theta orientation in getDelta
+ keep theta orientation in getQDeltaQ
+ Average Grad Shafranov solution error->0.000265163
+ Equilibrium q axis/edge-> 0.935514/2.39749
+ Equilibrium q min /max -> 0.935514/2.39749
+ keep theta orientation in getDelta
+ keep theta orientation in getQDeltaQ
+ ==========================================================
+ equilibrium grid dimension 64*202
+ minor/major radius     = 0.34/1 =0.34
+ R-magnetic             = 1.021
+ elongation             = 1.00012
+ triangularity          = -8.64482e-07
+ q axis/edge            = 0.935514/2.39749
+ q min/max              = 0.935514/2.39749
+ beta-poloidal          = 0
+ beta-toroidal          = 0
+ beta-N                 = 0
+ B0^2                   = 1
+ li                     = 1.11851
+ Ip                     = 0.350039
+0 ideal instabilitie(s)
+ ==========================================================
+0  Rat. surf. psi/psi_a = 0.0353068/0.0466927
+    safety factor       = 1.5
+    sqrt(-D_I)          = 0.5
+    Mercier D_R         = 0
+    <rs d psi/d r>      = 1.50014 (estimate)
+    Lambdas [psi_s norm]= 1.72657
+0 0 psi_s^(2 mu) Delta' = -0.563835 + i -0.000507315 +/- 0
+0 0 psi_s^(2 mu) Gamma' = 12.2271 + i 1.47197e-07 +/- 0
+0 1 psi_s^(2 mu) Delta' = 1.90472 + i 0.00182882 +/- 0
+0 1 psi_s^(2 mu) Gamma' = 0.225855 + i 0.00179832 +/- 0
+ ----------------------------------------------------------
+1  Rat. surf. psi/psi_a = 0.0427523/0.0466927
+    safety factor       = 2
+    sqrt(-D_I)          = 0.5
+    Mercier D_R         = 0
+    <rs d psi/d r>      = 1.2742 (estimate)
+    Lambdas [psi_s norm]= 0.755335
+1 0 psi_s^(2 mu) Delta' = 1.90472 + i -0.00182882 +/- 0
+1 0 psi_s^(2 mu) Gamma' = -4.58014 + i 0.00183859 +/- 0
+1 1 psi_s^(2 mu) Delta' = -13.3594 + i -8.35494e-07 +/- 0
+1 1 psi_s^(2 mu) Gamma' = -1.25499 + i 3.95582e-06 +/- 0
+ ----------------------------------------------------------
+ PEST3
+ resonant poloidal mode    ms = 3
+ toroidal mode             n  = 2
+ number of finite elements mm = 100 
+ Fourier modes -12, ..., 12
+ normalized wall distance  b  = 11
+ input file is eqdsk.cdf
+ reverse theta orientation
+ keep theta orientation in getDelta
+ keep theta orientation in getQDeltaQ
+ Average Grad Shafranov solution error->-0.00429557
+ *WARNING* inaccurate equilibrium
+ Equilibrium q axis/edge-> 1.1/13.1779
+ Equilibrium q min /max -> 1.1/13.1779
+ keep theta orientation in getDelta
+ keep theta orientation in getQDeltaQ
+ ==========================================================
+ equilibrium grid dimension 128*202
+ minor/major radius     = 0.7/1 =0.7
+ R-magnetic             = 1.14697
+ elongation             = 1.87981
+ triangularity          = 0.642366
+ q axis/edge            = 1.1/13.1779
+ q min/max              = 1.1/13.1779
+ beta-poloidal          = 0.508668
+ beta-toroidal          = 18.8929
+ beta-N                 = 4.82584
+ B0^2                   = 0.949255
+ li                     = 0.525744
+ Ip                     = 3.35526
+0 ideal instabilitie(s)
+ ==========================================================
+0  Rat. surf. psi/psi_a = 0.121457/0.269339
+    safety factor       = 1.5
+    sqrt(-D_I)          = 0.681767
+    Mercier D_R         = -0.324655
+    <rs d psi/d r>      = 4.65089 (estimate)
+    Lambdas [psi_s norm]= 1.6089
+0 0 psi_s^(2 mu) Delta' = -3.10533 + i -0.000841914 +/- 0
+0 0 psi_s^(2 mu) Gamma' = 15.2239 + i 0.000470376 +/- 0
+ ----------------------------------------------------------
+ PEST3
+ resonant poloidal mode    ms = 4
+ toroidal mode             n  = 3
+ number of finite elements mm = 100 
+ Fourier modes -10, ..., 10
+ normalized wall distance  b  = 11
+ input file is geqdsk
+ reverse theta orientation
+ keep theta orientation in getDelta
+ keep theta orientation in getQDeltaQ
+ Average Grad Shafranov solution error->0.000131087
+ Equilibrium q axis/edge-> 0.99178/3.57826
+ Equilibrium q min /max -> 0.935538/3.57826
+ keep theta orientation in getDelta
+ keep theta orientation in getQDeltaQ
+ ==========================================================
+ equilibrium grid dimension 128*201
+ minor/major radius     = 0.612818/1.62884 =0.376229
+ R-magnetic             = 1.66567
+ elongation             = 1.51523
+ triangularity          = 0.206833
+ q axis/edge            = 0.99178/3.57826
+ q min/max              = 0.935538/3.57826
+ beta-poloidal          = 0.11218
+ beta-toroidal          = 0.458949
+ beta-N                 = 0.372181
+ B0^2                   = 4.12092
+ li                     = 0.910872
+ Ip                     = 1.92616
+0 ideal instabilitie(s)
+ ==========================================================
+0  Rat. surf. psi/psi_a = 0.174017/0.381467
+    safety factor       = 1.33333
+    sqrt(-D_I)          = 0.503209
+    Mercier D_R         = -0.00540173
+    <rs d psi/d r>      = 1.71371 (estimate)
+    Lambdas [psi_s norm]= 1.33346
+0 0 psi_s^(2 mu) Delta' = -29.5037 + i -0.361183 +/- 0
+0 0 psi_s^(2 mu) Gamma' = -9.06933 + i -0.357746 +/- 0
+ ----------------------------------------------------------

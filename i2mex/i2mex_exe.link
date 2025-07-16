@@ -1,0 +1,14 @@
+i2mex.a
+esc.a 
+xplasma.a 
+fluxav.a 
+pspline.a
+lsode.a
+lsode_linpack.a 
+trgraf.a
+ezcdf.a
+mclib.a
+comput.a
+vaxonly.a
+portlib.a
+generic_dummy

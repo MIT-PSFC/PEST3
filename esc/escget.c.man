@@ -1,0 +1,389 @@
+.TH "escget.c" 3 "2 Jul 2003" "ESC" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+escget.c \- List of Get methods. The following routines give access equilibrium profile data and geometry after execution (Esc). 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <math.h>\fP
+.br
+\fC#include <stdio.h>\fP
+.br
+\fC#include <ctype.h>\fP
+.br
+\fC#include <stdlib.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBescGetNa1\fP (int *Na1)"
+.br
+.RI "\fIGet the radial number of grid points used internally by ESC.\fP"
+.ti -1c
+.RI "void \fBescGetNp1\fP (int *Np1)"
+.br
+.RI "\fIGet the number of poloidal rays + 1 used internally by ESC.\fP"
+.ti -1c
+.RI "void \fBescGetPsibar\fP (double *prof, int *ns)"
+.br
+.RI "\fIGet the poloidal flux/(2*pi) [Wb/rad].\fP"
+.ti -1c
+.RI "void \fBescGetPsi\fP (double *prof, int *ns)"
+.br
+.RI "\fIGet the poloidal flux [Wb].\fP"
+.ti -1c
+.RI "void \fBescGetPhibar\fP (double *prof, int *ns)"
+.br
+.RI "\fIGet the toroidal flux/(2*pi) [Wb/rad].\fP"
+.ti -1c
+.RI "void \fBescGetPhi\fP (double *prof, int *ns)"
+.br
+.RI "\fIGet the toroidal flux [Wb].\fP"
+.ti -1c
+.RI "void \fBescGetG\fP (double *prof, int *ns)"
+.br
+.RI "\fIGet the covariant toroidal magnetic field function [Tm].\fP"
+.ti -1c
+.RI "void \fBescGetIota\fP (double *prof, int *ns)"
+.br
+.RI "\fIGet the 1/q profile [-].\fP"
+.ti -1c
+.RI "void \fBescGetQ\fP (double *prof, int *ns)"
+.br
+.RI "\fIGet the safety factor (q) profile [-].\fP"
+.ti -1c
+.RI "void \fBescGetP\fP (double *prof, int *ns)"
+.br
+.RI "\fIGet the pressure in [mu0 Pa].\fP"
+.ti -1c
+.RI "void \fBescGetFourierR\fP (double *rcos, double *rsin, int *nf, int *ns)"
+.br
+.RI "\fIGet the Fourier coefficients of the R coordinate [m].\fP"
+.ti -1c
+.RI "void \fBescGetR\fP (double *r, int *nt1, int *ns, int *clockwise)"
+.br
+.RI "\fIGet the R coordinates [m].\fP"
+.ti -1c
+.RI "void \fBescGetFourierZ\fP (double *zcos, double *zsin, int *nf, int *ns)"
+.br
+.RI "\fIGet the Fourier coefficients of the Z coordinate [m].\fP"
+.ti -1c
+.RI "void \fBescGetZ\fP (double *z, int *nt1, int *ns, int *clockwise)"
+.br
+.RI "\fIGet the Z coordinate [m].\fP"
+.in -1c
+.SH "DETAILED DESCRIPTION"
+.PP 
+List of Get methods. The following routines give access equilibrium profile data and geometry after execution (Esc).
+.PP
+.PP
+.SH "FUNCTION DOCUMENTATION"
+.PP 
+.SS "void escGetFourierR (double * rcos, double * rsin, int * nf, int * ns)"
+.PP
+Get the Fourier coefficients of the R coordinate [m].
+.PP
+\fBParameters: \fP
+.in +1c
+.TP
+\fB\fIrcos\fP\fP
+the returned cosine coefficients of sizes [ns][nf] 
+.TP
+\fB\fIrsin\fP\fP
+the returned sine coefficients 
+.TP
+\fB\fInf\fP\fP
+the number of Fourier coefficients (input) 
+.TP
+\fB\fIns\fP\fP
+the radial size (input) 
+.PP
+\fBAuthor: \fP
+.in +1c
+L.E. Zakharov, A. Pletzer  
+.PP
+\fBSee also: \fP
+.in +1c
+\fBescGetFourierZ\fP 
+.SS "void escGetFourierZ (double * zcos, double * zsin, int * nf, int * ns)"
+.PP
+Get the Fourier coefficients of the Z coordinate [m].
+.PP
+\fBParameters: \fP
+.in +1c
+.TP
+\fB\fIzcos\fP\fP
+the returned cosine coefficients of sizes [ns][nf]. 
+.TP
+\fB\fIzsin\fP\fP
+the returned sine coefficients 
+.TP
+\fB\fInf\fP\fP
+the number of Fourier coefficients (input) 
+.TP
+\fB\fIns\fP\fP
+the radial size (input) 
+.PP
+\fBAuthor: \fP
+.in +1c
+L.E. Zakharov, A. Pletzer  
+.PP
+\fBSee also: \fP
+.in +1c
+\fBescGetFourierR\fP 
+.SS "void escGetG (double * prof, int * ns)"
+.PP
+Get the covariant toroidal magnetic field function [Tm].
+.PP
+\fBParameters: \fP
+.in +1c
+.TP
+\fB\fIprof\fP\fP
+the returned profile 
+.TP
+\fB\fIns\fP\fP
+the size of the returned profile (input) 
+.PP
+\fBAuthor: \fP
+.in +1c
+L.E. Zakharov, A. Pletzer  
+.PP
+\fBSee also: \fP
+.in +1c
+\fBescGetIota\fP \fBescGetQ\fP \fBescGetP\fP 
+.SS "void escGetIota (double * prof, int * ns)"
+.PP
+Get the 1/q profile [-].
+.PP
+\fBParameters: \fP
+.in +1c
+.TP
+\fB\fIprof\fP\fP
+the returned profile 
+.TP
+\fB\fIns\fP\fP
+the size of the returned profile (input) 
+.PP
+\fBAuthor: \fP
+.in +1c
+L.E. Zakharov, A. Pletzer  
+.PP
+\fBSee also: \fP
+.in +1c
+\fBescGetQ\fP \fBescGetG\fP \fBescGetP\fP 
+.SS "void escGetNa1 (int * Na1)"
+.PP
+Get the radial number of grid points used internally by ESC.
+.PP
+\fBParameters: \fP
+.in +1c
+.TP
+\fB\fINa1\fP\fP
+the grid size 
+.PP
+\fBAuthor: \fP
+.in +1c
+L.E. Zakharov, A. Pletzer 
+.PP
+\fBSee also: \fP
+.in +1c
+\fBescGetNp1\fP 
+.SS "void escGetNp1 (int * Np1)"
+.PP
+Get the number of poloidal rays + 1 used internally by ESC.
+.PP
+\fBParameters: \fP
+.in +1c
+.TP
+\fB\fINp1\fP\fP
+the number of poloidal sections + 1 
+.PP
+\fBAuthor: \fP
+.in +1c
+L.E. Zakharov, A. Pletzer 
+.PP
+\fBSee also: \fP
+.in +1c
+\fBescGetNa1\fP 
+.SS "void escGetP (double * prof, int * ns)"
+.PP
+Get the pressure in [mu0 Pa].
+.PP
+\fBParameters: \fP
+.in +1c
+.TP
+\fB\fIprof\fP\fP
+the returned profile 
+.TP
+\fB\fIns\fP\fP
+the size of the returned profile (input) 
+.PP
+\fBAuthor: \fP
+.in +1c
+L.E. Zakharov, A. Pletzer  
+.PP
+\fBSee also: \fP
+.in +1c
+\fBescGetIota\fP \fBescGetG\fP \fBescGetQ\fP 
+.SS "void escGetPhi (double * prof, int * ns)"
+.PP
+Get the toroidal flux [Wb].
+.PP
+\fBParameters: \fP
+.in +1c
+.TP
+\fB\fIprof\fP\fP
+the returned profile 
+.TP
+\fB\fIns\fP\fP
+the size of the returned profile (input) 
+.PP
+\fBAuthor: \fP
+.in +1c
+L.E. Zakharov, A. Pletzer  
+.PP
+\fBSee also: \fP
+.in +1c
+\fBescGetPhibar\fP 
+.SS "void escGetPhibar (double * prof, int * ns)"
+.PP
+Get the toroidal flux/(2*pi) [Wb/rad].
+.PP
+\fBParameters: \fP
+.in +1c
+.TP
+\fB\fIprof\fP\fP
+the returned profile 
+.TP
+\fB\fIns\fP\fP
+the size of the returned profile (input) 
+.PP
+\fBAuthor: \fP
+.in +1c
+L.E. Zakharov, A. Pletzer 
+.PP
+\fBSee also: \fP
+.in +1c
+\fBescGetPhi\fP 
+.SS "void escGetPsi (double * prof, int * ns)"
+.PP
+Get the poloidal flux [Wb].
+.PP
+\fBParameters: \fP
+.in +1c
+.TP
+\fB\fIprof\fP\fP
+the returned profile 
+.TP
+\fB\fIns\fP\fP
+the size of the returned profile (input) 
+.PP
+\fBAuthor: \fP
+.in +1c
+L.E. Zakharov, A. Pletzer 
+.PP
+\fBSee also: \fP
+.in +1c
+\fBescGetPsibar\fP 
+.SS "void escGetPsibar (double * prof, int * ns)"
+.PP
+Get the poloidal flux/(2*pi) [Wb/rad].
+.PP
+\fBParameters: \fP
+.in +1c
+.TP
+\fB\fIprof\fP\fP
+the returned profile 
+.TP
+\fB\fIns\fP\fP
+the size of the returned profile (input) 
+.PP
+\fBAuthor: \fP
+.in +1c
+L.E. Zakharov, A. Pletzer 
+.PP
+\fBSee also: \fP
+.in +1c
+\fBescGetPsi\fP 
+.SS "void escGetQ (double * prof, int * ns)"
+.PP
+Get the safety factor (q) profile [-].
+.PP
+\fBParameters: \fP
+.in +1c
+.TP
+\fB\fIprof\fP\fP
+the returned profile 
+.TP
+\fB\fIns\fP\fP
+the size of the returned profile (input) 
+.PP
+\fBAuthor: \fP
+.in +1c
+L.E. Zakharov, A. Pletzer  
+.PP
+\fBSee also: \fP
+.in +1c
+\fBescGetIota\fP \fBescGetG\fP \fBescGetP\fP 
+.SS "void escGetR (double * r, int * nt1, int * ns, int * clockwise)"
+.PP
+Get the R coordinates [m].
+.PP
+The poloidal index varies faster. 
+.PP
+\fBParameters: \fP
+.in +1c
+.TP
+\fB\fIr\fP\fP
+the returned array of size [ns][nt1]. 
+.TP
+\fB\fInt1\fP\fP
+the number of poloidal sections + 1 (input) 
+.TP
+\fB\fIns\fP\fP
+the radial size (input) 
+.TP
+\fB\fIclockwise\fP\fP
+poloidal angle orientation (1 for clockwise,  0 for counterclockwise) 
+.PP
+\fBAuthor: \fP
+.in +1c
+L.E. Zakharov, A. Pletzer  
+.PP
+\fBSee also: \fP
+.in +1c
+\fBescGetZ\fP 
+.SS "void escGetZ (double * z, int * nt1, int * ns, int * clockwise)"
+.PP
+Get the Z coordinate [m].
+.PP
+The poloidal index varies faster. 
+.PP
+\fBParameters: \fP
+.in +1c
+.TP
+\fB\fIr\fP\fP
+the returned array of size [ns][nt1]. 
+.TP
+\fB\fInt1\fP\fP
+the number of poloidal sections + 1 (input) 
+.TP
+\fB\fIns\fP\fP
+the radial size (input) 
+.TP
+\fB\fIclockwise\fP\fP
+poloidal angle orientation (1 for clockwise,  0 for counterclockwise) 
+.PP
+\fBAuthor: \fP
+.in +1c
+L.E. Zakharov, A. Pletzer  
+.PP
+\fBSee also: \fP
+.in +1c
+\fBescGetR\fP 
+.SH "AUTHOR"
+.PP 
+Generated automatically by Doxygen for ESC from the source code.

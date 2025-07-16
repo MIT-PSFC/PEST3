@@ -1,0 +1,94 @@
+PEST 3 code 
+===========
+
+PEST-3 computes the stability of toroidally symmetric fusion plasmas. 
+Pest3 can be used to determine both the ideal and non-ideal stability, 
+the latter being expressed in terms of delta-prime indices. 
+
+1. Prerequisites
+----------------
+
+You will need access to the CMake, blas, lapack, netcdf (C and fortran builds).
+It is recommended that you use vendor versions of both lapack and
+blas libraries as these are expected to have superior performance. Be 
+aware, however, that the same Fortran compiler must be used to compile
+lapack, blas, and pest3 lest there be undefined references. 
+
+CMake can be obtained from 
+http://www.cmake.org/
+
+Netcdf can be donwloaded from 
+http://www.unidata.ucar.edu/software/netcdf/
+
+2. Obtaining pest3
+------------------
+
+If you have a USERNAME on sourceforge:
+$ svn co svn+ssh://USERNAME@svn.code.sf.net/p/pest3code/code pest3code
+
+otherwise
+$ svn co https://svn.code.sf.net/p/pest3code/code pest3code
+
+3. Configuring pest3
+--------------------
+
+$ cd pest3code
+$ mkdir build
+$ cd build
+
+In most cases you need only do:
+$ cmake ..
+
+Check the cmake manual to see other options. 
+
+4. Building pest3
+-----------------
+
+$ make
+
+Note: make -j num_proc where num_proc >= 2 will not work due to a 
+module dependency issue.
+
+5. How to run pest3
+-------------------
+
+Type to see the list of options
+
+$ cd pest3
+$ pest3x -h 
+
+gives all the command line options. The examples/ directory contains
+sample input files. Note that the options do not accept a space between
+the option and the value
+
+Example:
+$ ./pest3x -f../../examples/inp1.cdf -i1
+...
+0 ideal instabilitie(s)
+ ==========================================================
+0  Rat. surf. psi/psi_a = 0.0353068/0.0466927
+    safety factor       = 1.5
+    sqrt(-D_I)          = 0.5
+    Mercier D_R         = 0
+    <rs d psi/d r>      = 1.50014 (estimate)
+    Lambdas [psi_s norm]= 1.7302
+0 0 psi_s^(2 mu) Delta' = -0.543784 + i -0.000229349 +/- 0
+0 0 psi_s^(2 mu) Gamma' = 12.1673 + i 4.98948e-06 +/- 0
+
+6. More about PEST-3
+--------------------
+
+Feel free to send emails to 
+
+pletzer@txcorp.com
+
+for questions and suggestions.
+
+7. References
+-------------
+
+[1] Grimm, R C, Green J M, and Johnson J L, Meth. Comput. Phys. 9, 253 (1976).
+
+[2] Grimm, R C, Dewar R L, and Manickam J, J. Comput. Phys. 49, 94 (1983).
+
+[3] Pletzer, A, Bondeson A and Dewar R L, J. Comput. Phys. 115, 530 (1994).

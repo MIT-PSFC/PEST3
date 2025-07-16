@@ -1,0 +1,214 @@
+ run imode                    =      1
+
+
+ equilibrium grid size         nosurf =     402
+ rel. width of big element      dlayb =      0.900000
+ rel. width for frobenius coeff. dlay =      0.005000
+
+
+ number of finite elements          m =      70
+
+  ***error in nodes: zc(nosing)+b = ;    1.0000243148208185     
+ half width of element near rat. surf =    0.00016742
+
+
+
+ number of mesh nodes in:
+ section     zone-1     zone-2     zone-3
+    1             4         45          3
+    2             4          9          4
+
+ rational surface at surface no.   106
+                              q =   0.150000000E+01
+ 1st derivative of q         qp =   0.503855604E+02
+ 2nd derivative of q        qpp =   0.370095533E+04
+ big exponent                pb =  -0.100000000E+01
+ small exponent              ps =   0.000000000E+00
+ matching coef.     cmatch(  1) =   0.225562158E+04
+ rational surface   psinew(106) =   0.353067725E-01
+ norm factor 2 mu f <r grad psi>       0.119469540E+03
+ inverse aspect ratio              =       0.271008994
+ beta poloidal 2 p/B_theta^2       =       0.000000000
+ Lq/Lp                             =       0.000000000
+
+ frobenius eigenvector and their adjoint for ls =   3
+
+ re vector: small re adj.v.: small re vector:   big re adj.v.:   big
+
+ frobenius eigenvector and their adjoint for ls =   3
+
+ re vector: small re adj.v.: small re vector:   big re adj.v.:   big
+   0.10000000E+01  -0.28410984E+00   0.10000000E+01   0.12841098E+01
+  -0.72815271E+00   0.17635172E+01  -0.16110409E+00  -0.17635172E+01
+
+ im vector: small im adj.v.: small im vector:   big im adj.v.:   big
+   0.00000000E+00   0.64970431E-14   0.00000000E+00  -0.64970431E-14
+  -0.10168537E-13  -0.15700994E-13  -0.22494636E-14  -0.15700994E-13
+
+ zero beta coefficients:
+           re log           im log         re const         im const
+   0.21695698E-01  -0.11585843E-16  -0.20235576E-01  -0.43030663E-04
+  -0.15796369E-01  -0.40368175E-16   0.32600341E-02   0.69324158E-05
+
+ order pb+1 re coefficients:
+            0           1           2           3           4           5           6           7           8
+
+ order pb+1 re coefficients:
+            9          10
+   0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+   0.0000E+00  0.0000E+00
+   0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+   0.0000E+00  0.0000E+00
+
+ order pb+1 im coefficients:
+            0           1           2           3           4           5           6           7           8
+
+ order pb+1 im coefficients:
+            9          10
+   0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+   0.0000E+00  0.0000E+00
+   0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+   0.0000E+00  0.0000E+00
+
+ order pb+2 re coefficients:
+            0           1           2           3           4           5           6           7           8
+
+ order pb+2 re coefficients:
+            9          10
+   0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+   0.0000E+00  0.0000E+00
+   0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+   0.0000E+00  0.0000E+00
+
+ order pb+2 im coefficients:
+            0           1           2           3           4           5           6           7           8
+
+ order pb+2 im coefficients:
+            9          10
+   0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+   0.0000E+00  0.0000E+00
+   0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+   0.0000E+00  0.0000E+00
+
+ coefficient for subtraction of small solution has been reset to: xsmnus( 1) = -0.00000000E+00
+
+
+
+ plasma is ideally stable: 
+ -------------------------
+
+2 times matching matrix (re part)
+
+  -0.15E-01   0.15E+00
+   0.15E+00  -0.97E-02
+
+2 times matching matrix (im part)
+
+  -0.44E-05  -0.14E-06
+   0.14E-06  -0.44E-05
+
+
+                     end of case no  1
+
+ run imode                    =      2
+
+
+ number of finite elements          m =     100
+
+  ***error in nodes: zc(nosing)+b = ;    1.0000243148208185     
+
+
+ number of mesh nodes in:
+ section     zone-1     zone-2     zone-3
+    1             5         66          4
+    2             5         14          5
+
+
+ plasma is ideally stable: 
+ -------------------------
+
+2 times matching matrix (re part)
+
+  -0.12E-01   0.15E+00
+   0.15E+00  -0.68E-02
+
+2 times matching matrix (im part)
+
+  -0.32E-05  -0.67E-07
+   0.67E-07  -0.32E-05
+
+
+                     end of case no  2
+
+ run imode                    =      3
+
+
+ number of finite elements          m =     140
+
+  ***error in nodes: zc(nosing)+b = ;    1.0000243148208185     
+
+
+ number of mesh nodes in:
+ section     zone-1     zone-2     zone-3
+    1             7         93          6
+    2             7         19          7
+
+
+ plasma is ideally stable: 
+ -------------------------
+
+2 times matching matrix (re part)
+
+  -0.99E-02   0.15E+00
+   0.15E+00  -0.53E-02
+
+2 times matching matrix (im part)
+
+  -0.24E-05  -0.82E-07
+   0.82E-07  -0.24E-05
+
+
+                     end of case no  3
+
+ run imode                    =      4
+
+
+ number of finite elements          m =     200
+
+  ***error in nodes: zc(nosing)+b = ;    1.0000243148208185     
+
+
+ number of mesh nodes in:
+ section     zone-1     zone-2     zone-3
+    1            10        132          9
+    2            10         28         10
+
+
+ plasma is ideally stable: 
+ -------------------------
+
+2 times matching matrix (re part)
+
+  -0.86E-02   0.15E+00
+   0.15E+00  -0.41E-02
+
+2 times matching matrix (im part)
+
+  -0.17E-05  -0.15E-06
+   0.15E-06  -0.17E-05
+
+
+                     end of case no  4
+
+
+
+ 2 times matching matrix extrapolated to infinite m (re part)
+
+   -0.00799    0.15384
+    0.15384   -0.00356
+
+
+ 2 times matching matrix extrapolated to infinite m (im part)
+
+   -0.00000   -0.00000
+    0.00000   -0.00000

@@ -1,0 +1,36 @@
+ PEST3
+ resonant poloidal mode    ms = 3
+ toroidal mode             n  = 2
+ number of finite elements mm = 70 100 140 200 
+ Fourier modes -10, ..., 10
+ normalized wall distance  b  = 0
+ Average Grad Shafranov solution error->0.000131077
+ Equilibrium q axis/edge-> 0.99178/3.57826
+ Equilibrium q min /max -> 0.935538/3.57826
+ ==========================================================
+ equilibrium grid dimension 128*402
+ minor/major radius     = 0.612818/1.62884 =0.376229
+ R-magnetic             = 1.66567
+ elongation             = 1.51523
+ triangularity          = 0.206833
+ separatrix             = 0.9999
+ q axis/edge            = 0.99178/3.57826
+ q min/max              = 0.935538/3.57826
+ beta-poloidal          = 0.112207
+ beta-toroidal          = 0.45896
+ beta-N                 = 0.372243
+ B0^2                   = 4.12092
+ li                     = 0.911136
+ Ip                     = 1.92588
+0 ideal instabilitie(s)
+ ==========================================================
+0  Rat. surf. psi/psi_a = 0.209062/0.381467
+    safety factor       = 1.5
+    sqrt(-D_I)          = 0.505672
+    Mercier D_R         = -0.00888103
+    <rs d psi/d r>      = 1.64586 (estimate)
+    Lambdas [psi_s norm]= 1.47538
+0 0 psi_s^(2 mu) Delta' = -2.98758 + i -0.000754915 +/- 0.0605855
+0 0 psi_s^(2 mu) Gamma' = 7.55193 + i -0.408324 +/- 0.0374311
+ ----------------------------------------------------------
+ input file is geqdsk

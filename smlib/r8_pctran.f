@@ -1,0 +1,57 @@
+C******************** START FILE R8_PCTRAN.FOR
+C============================================================
+C  R8_PCTRAN   DO PCWISE LINEAR INTERPOLATION TO PROGRAM COORDINATES
+C
+C  ARGS:
+C
+C  X  IN    X VALUES TO WHICH TO INTERPOLATE
+C  Y  OUT   Y VALUES INTERPOLATED
+C  N   IN   DIMENSIONALITY OF X,Y
+C
+C  XPC  IN  X VALUES FROM WHICH TO INTERPOLATE
+C  YPC  IN  Y VALUES FROM WHICH TO INTERPOLATE
+C  NPC  IN  # OF X,Y, VALUES
+C  MAXPC  IN  DIMENSIONALITY OF XPC,YPC
+C
+      SUBROUTINE R8_PCTRAN(X,Y,N,XPC,YPC,MAXPC,NPC)
+C
+!============
+! idecl:  explicitize implicit INTEGER declarations:
+      IMPLICIT NONE
+      INTEGER n,npc,i,npm1,j,jp1,maxpc
+!============
+! idecl:  explicitize implicit REAL declarations:
+      REAL*8 y,xpc,ypc,x,zy
+!============
+      DIMENSION X(N),Y(N),XPC(MAXPC),YPC(MAXPC)
+C
+      IF(NPC.GT.1) GO TO 10
+      IF(NPC.LE.0) ZY=0.0D0
+      IF(NPC.GT.0) ZY=YPC(1)
+      DO 5 I=1,N
+         Y(I)=ZY
+ 5    CONTINUE
+      RETURN
+C
+ 10   CONTINUE
+C
+      DO 15 I=1,N
+      IF(X(I).GT.XPC(1)) GO TO 12
+      Y(I)=YPC(1)
+      GO TO 15
+ 12   CONTINUE
+      IF(X(I).LT.XPC(NPC)) GO TO 13
+      Y(I)=YPC(NPC)
+      GO TO 15
+ 13   CONTINUE
+      NPM1=NPC-1
+      DO 14 J=1,NPM1
+      IF((X(I).GE.XPC(J)).AND.(X(I).LT.XPC(J+1))) GO TO 16
+ 14   CONTINUE
+ 16   CONTINUE
+      JP1=J+1
+      Y(I)=YPC(J)+(X(I)-XPC(J))*(YPC(JP1)-YPC(J))/(XPC(JP1)-XPC(J))
+ 15   CONTINUE
+      RETURN
+      	END
+ 

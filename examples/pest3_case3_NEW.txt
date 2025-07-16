@@ -1,0 +1,36 @@
+ PEST3
+ resonant poloidal mode    ms = 3
+ toroidal mode             n  = 2
+ number of finite elements mm = 70 100 140 200 
+ Fourier modes -10, ..., 10
+ normalized wall distance  b  = 0
+ Average Grad Shafranov solution error->0.000265163
+ Equilibrium q axis/edge-> 0.935514/2.39749
+ Equilibrium q min /max -> 0.935514/2.39749
+ ==========================================================
+ equilibrium grid dimension 64*402
+ minor/major radius     = 0.34/1 =0.34
+ R-magnetic             = 1.021
+ elongation             = 1.00012
+ triangularity          = -8.64482e-07
+ separatrix             = 0.9999
+ q axis/edge            = 0.935514/2.39749
+ q min/max              = 0.935514/2.39749
+ beta-poloidal          = 0
+ beta-toroidal          = 0
+ beta-N                 = 0
+ B0^2                   = 1
+ li                     = 1.11844
+ Ip                     = 0.350051
+0 ideal instabilitie(s)
+ ==========================================================
+0  Rat. surf. psi/psi_a = 0.0353068/0.0466927
+    safety factor       = 1.5
+    sqrt(-D_I)          = 0.5
+    Mercier D_R         = 0
+    <rs d psi/d r>      = 1.50014 (estimate)
+    Lambdas [psi_s norm]= 1.72782
+0 0 psi_s^(2 mu) Delta' = -0.283799 + i -0.000122384 +/- 0.0153926
+0 0 psi_s^(2 mu) Gamma' = 12.2513 + i 7.94289e-06 +/- 0.00673449
+ ----------------------------------------------------------
+ input file is inp1.cdf

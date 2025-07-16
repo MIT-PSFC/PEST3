@@ -1,0 +1,9 @@
+# public modules -- debugging & xplasma f77 interface compatibility
+
+### xplasma_obj_instance*.f90 -> xplasma2 library
+### xplasma_debug_link.f90    -> xplasma_debug library
+
+# legacy calls...
+
+xplasma_calls.for
+xplasma_get.for

@@ -1,0 +1,139 @@
+This document cpontains the follwing sections:
+
+A. HOWTO to build PEST3 outside the PPPL environment
+
+B. How to run PEST3 
+
+A. HOWTO to build PEST3 outside the PPPL environment
+====================================================
+
+Alex Pletzer (pletzer@pppl.gov) Thu Feb 22 11:35:15 EST 2001
+
+1. PREREQUISITES:
+
+Must have the following compilers:
+
+* f90
+* C
+* C++
+
+the following tools:
+
+* gcc
+* perl
+* gmake
+* gunzip
+
+and the following packages:
+
+* LAPACK (http://www.netlib.org)
+* BLAS (http://www.netlib.org)
+* NETCDF (http://www.unidata.ucar.edu/packages/netcdf)
+
+Optionally  you may also want to have the MDSPLUS libraries installed. MDSPlus
+is developed at MIT and has become the standard Database storage system for 
+experimental tokamak data.
+
+installed on system. These packages should be preferably installed under
+/usr/local
+
+2. DOWNLOADING NTCC MODULES:
+
+In addition you will need to download the following modules from
+http://w3.pppl.gov/NTCC:
+
+* PEST3 (pest3.2.tar.gz)
+* XPLASMA (xplasma.tar.gz)
+* PSPLINE (pspline.tar.gz)
+* TRXPLIB (trxplib.tar.gz)
+
+In a suitable directory, deflate the files
+
+$ gunzip -c9 pest3.2.tar.gz | tar xvf -
+$ gunzip -c9 xplasma.tar.gz | tar xvf -
+$ gunzip -c9 pspline.tar.gz | tar xvf -
+$ gunzip -c9 trxplib.tar.gz | tar xvf -
+
+
+3. ADAPTING THE MAKEFILES TO YOUR SETUP
+
+The Makefiles provided are quite flexible and should be usable as is
+on most UNIX platforms. However, these Makefiles may need to be edited if
+your packages (e.g. BLAS, LAPACK, NETCDF) don't reside in the usual places
+(/usr/local/lib).
+
+Edit 
+
+share/Makefile.local.sample 
+
+and save it as 
+
+share/Makefile.local
+
+In particular, you may want to reset the following variables:
+
+LIBROOT=...
+NETCDF_DIR=...
+
+
+4. BUILDING NTCC LIBRARIES
+
+Do:
+
+$ gmake libs
+
+
+5. BUILDING PEST3
+
+Do:
+
+$ cd pest3.2
+
+then type either:
+
+$ gmake all NO_TRXPLIB=1
+
+if you don't have MDSPlus, or 
+
+$ gmake all
+
+to enable MDSPlus access
+
+6. TESTING PEST3
+
+$ gmake tests
+
+Some small differences can occur at the latest test stage,  due to the 
+limited precision associated with reading in ASCII formatted g-eqdsk files.
+
+
+B. HOW TO RUN PEST3
+===================
+
+The pest3.2 executable resides in <platform>/test with a symbolic link to
+<platform>/bin.  A list of input options can be obtained by typing 
+
+$ <platform>/bin/pest3.2 -h
+
+*NOTE* There should be no space between an option and its value (e.g. -m2 
+but not -m 2). The most important options are:
+
+-n<ns> Set the toroidal mode number (2)
+
+-m<ms> Set the resonant poloidal mode (3)
+
+-k"Ns1 Ns2 Ns3..." Set the number of radial nodes (more than one for a 
+convergence study). 
+
+-l<Lmax1> Poloidal Fourier modes span -|Lmax1|,...+|Lmax1| (10)
+
+-b<Bw> Conducting wall at distance Bw * the minor radius (0.)
+
+-i<if> Input file format (1)
+
+-f<File> Read equilibrium data from <File>, which can be an MDSPlus path.
+
+A run will produce a file pest3.cdf. A matlab script is provided in the 
+distribution to display the results.
+
+

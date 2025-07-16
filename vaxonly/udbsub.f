@@ -1,0 +1,130 @@
+C-----------------------------------------------------------------------
+C  UDBSUB  SUBSTITUTE STR2 FOR STR1 IN LINE -- ALL OCCURRENCES
+C
+      SUBROUTINE UDBSUB(LINE,STR1,STR2)
+C
+      implicit NONE
+C
+      CHARACTER*(*) LINE   ! BUFFER TO MODIFY
+      CHARACTER*(*) STR1   ! "FROM" STRING
+      CHARACTER*(*) STR2   ! "TO" STRING
+C
+C---------------
+C
+      INTEGER IFND(256)
+C
+      integer iltot,illin,ils1,ils2,inum,ic,ic0,idif,ishift
+      integer ic0p,ict,icti,ilim,ilnurd
+C---------------
+C
+      ILTOT=LEN(LINE)
+      ILLIN=ILNURD(LINE)  ! LENGTH W/O TRAILING BLANKS
+C
+      ILS1=ILNURD(STR1)
+      ILS2=ILNURD(STR2)
+      IF(ILS1.EQ.ILS2) THEN
+        IF(STR1.EQ.STR2) RETURN  ! NO CHANGE NEEDED
+      ENDIF
+C
+C  INDEX OCCURRENCES OF STR1 IN LINE
+C
+      INUM=0
+      IC=ILLIN+1
+C
+ 10   CONTINUE
+      IC=IC-1
+      IC0=IC-ILS1+1
+      IF(IC0.LE.0) GO TO 100
+C
+      IF(LINE(IC0:IC).EQ.STR1(1:ILS1)) THEN
+        INUM=INUM+1
+        IFND(INUM)=IC0
+        IC=IC0
+      ENDIF
+C
+      GO TO 10
+C
+C  CHECK IF SUBSTITUTIONS CAN BE MADE
+C
+ 100  CONTINUE
+C
+      IF(INUM.EQ.0) RETURN
+C
+      IDIF=ILS2-ILS1
+      IF((ILLIN+INUM*IDIF).GT.ILTOT) THEN
+        write(6,9001) LINE(1:ILLIN),STR1(1:ILS1),STR2(1:ILS2)
+ 9001   FORMAT(
+     >' ?UDBSUB -- BUFFER OVERFLOW, CANNOT PERFORM SUBSTITUTION'/
+     >'  BUFFER:  ',A/'  FROM STRING:  ',A/'  TO STRING:  ',A/)
+        RETURN
+      ENDIF
+C
+C  DO SUBSTITUTIONS - ALGORITHM DEPENDS ON SIGN OF IDIF
+C
+      IF(IDIF.LE.0) THEN
+C
+C  NO SHIFT OR LEFT SHIFT BECAUSE TO STRING IS OF SAME LENGTH OR
+C  SHORTER
+C
+        ISHIFT=0
+        ICT=0
+ 110    CONTINUE
+C
+        ICT=ICT+1
+        IF(ICT.GT.INUM) THEN
+          LINE(ILIM+ISHIFT+1:)=' '
+          GO TO 500
+        ENDIF
+C
+        ICTI=INUM-ICT+1
+        IC0=IFND(ICTI)
+        LINE(IC0+ISHIFT:IC0+ISHIFT+ILS2-1)=STR2(1:ILS2)
+C
+        ISHIFT=ISHIFT+IDIF
+C
+        IF(ICT.LT.INUM) THEN
+          ILIM=IFND(ICTI-1)-1
+        ELSE
+          ILIM=ILLIN
+        ENDIF
+C
+        IF(ISHIFT.EQ.0) GO TO 110
+        DO 120 IC=IC0+ILS1,ILIM
+          LINE(IC+ISHIFT:IC+ISHIFT)=LINE(IC:IC)
+ 120    CONTINUE
+C
+        GO TO 110
+C
+      ELSE
+C
+C  RIGHT SHIFT BECAUSE TO STRING IS LONGER THAN FROM STRING
+C
+        ISHIFT=INUM*IDIF
+        ICT=INUM+1
+        IC0=ILLIN+1
+C
+ 210    CONTINUE
+C
+        ICT=ICT-1
+        IF(ICT.EQ.0) GO TO 500
+C
+        IC0P=IC0
+        ICTI=INUM-ICT+1
+        IC0=IFND(ICTI)
+C
+        DO 220 IC=IC0P+ISHIFT-1,IC0+ISHIFT+ILS1,-1
+          LINE(IC:IC)=LINE(IC-ISHIFT:IC-ISHIFT)
+ 220    CONTINUE
+C
+        ISHIFT=ISHIFT-IDIF
+C
+        LINE(IC0+ISHIFT:IC0+ISHIFT+ILS2-1)=STR2(1:ILS2)
+C
+        GO TO 210
+C
+      ENDIF
+C
+ 500  CONTINUE
+C
+      RETURN
+      END

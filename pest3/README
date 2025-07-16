@@ -1,0 +1,145 @@
+PEST3: Nonideal Stability Code for Toroidal Plasmas
+===================================================
+
+
+This is the nonideal (Delta') version of the Princeton Equilibrium and 
+STability (PEST) suite of codes, which has been developed since the late 1970s
+to determine the linear stability properties of toroidal, magnetically 
+confined plasma equilibria. Here is a short overview of the currently existing 
+PEST versions:
+
+* PEST1: Determines the ideal MHD growth rate of a displacement perturbation,
+similarly to ERATO/GATO and other toroidal stability codes [1].
+
+* PEST2: Only solves for the normal displacement component, the two other 
+components having been eliminated analytically by assuming the plasma to have
+zero inertia for displacements lying on the flux surfaces. This reduces
+the size of the problem and allows accurate determination of the marginal 
+stability point. However, the obtained growth rate is 'fake' (not physically
+relevant). A direct competitor to PEST2 is DCON [2].
+
+* PEST3 (this version): Assumes zero-inertia for all components of the displacement. 
+The result is a displacement field that is strongly singular (i.e. non-square
+integrable) about rational surfaces. The leading coefficients of the dominant
+and recessive components of the normal displacement are extracted to form 
+a matching (Delta'-)matrix, which can be used in a postprocessing stage to 
+determine the nonideal stability of linear or weakly nonlinear modes. Modes 
+that fall in this category are the nonlinear resistive and neoclassical 
+tearing modes for instance, provided the island width is small compared to
+the minor radius. In addition to computing the matching data, PEST3 also 
+returns a yes/no answer to the ideal stability question.
+
+PEST3 uses a variational scheme to calculate the Delta'-matrix described in
+Ref.[3]. In the past few years, the code has changed significantly, although only
+cosmetically. PEST3 is has been rewritten in Fortran 90 to ensure full portability
+across UNIX workstations. Arrays are allocated dynamically, and more significantly
+perhaps, is the ability to embed or extend PEST3 by hooking to its API calls. Thus, it
+has now become effortless to integrate PEST3 into a foreign environment (e.g. Python, 
+Matlab,...). A C++ driver is provided to illustrate the use of the API calls. 
+Finally, PEST3 by interfacing to I2MEX, has overcome its long standing dependence on 
+the JSOLVER equilibrium format; at the time this README is being written, there are 
+7 supported formats including direct access to TRANSP UFILES, G-EQDSK files stored 
+locally or in a MDSPlus database, with the list likely to grow.
+
+Many people have contributed to the development of PEST3: R C Grimm for the
+earlier versions, J Manickam for releasing the first PEST3 version in 1980s, 
+Doug McCune indirectly by writing the cubic spline module PSPLINE/XPLASMA and 
+extending the MDSPlus connectivity which greatly enhanced the capability of PEST3,
+Ch Ludescher for solving portability and setup problems.
+
+A. Pletzer (pletzer@pppl.gov)
+
+1) Installation
+---------------
+
+There are dependencies on other packages not provided with this distribution.
+All these packages are free and can be downloaded either from http://www.netlib.org,
+(LAPACK, BLAS), http://www.unidata.ucar.edu/packages/netcdf (NETCDF), or 
+http://w3.pppl.gov/NTCC (for the rest). 
+
+For more details, check the INSTALL file.
+
+If you're a PPPL user, all these packages should already be installed and all you
+have to do then is:
+
+gmake all
+
+or, if you do not want or have not access to MDSPlus data, do
+
+gmake all NO_TRXPLIB=1
+
+This will by default install a library under ../<platform>/lib and a test executable
+ ../<platform>/bin/pest3.2
+
+
+*NOTE* The excutable pest3.2 may rely on shared objects (*.so files). To resolve these
+dependencies you will have to properly set the LD_LIBRARY_PATH variable. Here are some
+examples (need adapt to your setup):
+
+On SUN: 
+
+setenv LD_LIBRARY_PATH /usr/local/mdsplus/lib:/opt/SUNWspro/SC5.0/lib:/usr/local/lib
+
+On ALPHA (OSF1 and Linux):
+
+setenv LD_LIBRARY_PATH /usr/local/mdsplus/lib
+
+On Intel-Linux (Fujitsu compiler)
+
+setenv LD_LIBRARY_PATH /usr/local/ffc/lib:/usr/local/mdsplus/lib
+
+(Bash users, replace 'setenv LD_LIBRARY_PATH ' by 'export LD_LIBRARY_PATH='!)
+
+
+2) Test run
+-----------
+
+The command 
+
+../<platform>/bin/pest3.2 -h
+
+tells you how to set the input parameters. The various input formats are supported
+through the use of the "-i<Number>", where <Number> ranges from -1 to (presently) 5.
+The input file can be specified using the "-f<FileName>" option where <FileName>
+can be an MDSPlus path. Use any of the input files INP1*, inp1.cdf or g*.
+
+Once terminated, the run will dump data into a file "pest3.cdf", a netCDF file
+for which a MATLAB script (pest3.m) is provided. Just run type "pest3" at the 
+MATLAB prompt and you should see few windows popping up.
+
+Type "gmake tests" to compare against reference results.
+
+Various runs and comparisons to other stability codes are collected under 
+http://w3.pppl.gov/~pletzer/pest3.
+
+
+3) Documentation
+--------------
+
+All API methods are documented in http://w3.pppl.gov/NTCC/PEST3/doc.
+
+Enjoy!
+
+pletzer@pppl.gov
+
+4) References
+-------------
+
+[1] Grimm, R C, Green J M, and Johnson J L, Meth. Comput. Phys. 9, 253 (1976).
+
+[2] Grimm, R C, Dewar R L, and Manickam J, J. Comput. Phys. 49, 94 (1983).
+
+[3] Pletzer, A, Bondeson A and Dewar R L, J. Comput. Phys. 115, 530 (1994).
+
+5) To create a static version
+-----------------------------
+
+The command varies form one architecture to another, and from compiler version
+to another. The following has worked:
+
+On Linux-intel:
+g++ -static -o pest3.2 ../LINUX/obj/pest3_2/drive.o ../LINUX/lib/libpest3_2.a -L../LINUX/lib -L/usr/ntcc/lff95/lib -li2mex -lesc -llsode -llsode_linpack -ltrxplib -ltrread -ltr_getnl -lrp_kernel -lrplot_io -lxdatmgr -linterp_sub  -lxplasma -lfluxav -lsmlib -lpspline -lezcdf -lmclib -lcomput -lvaxonly  -lportlib   -lmdstransp -L/usr/local/lff95/lib -L/usr/local/lib -lnetcdf -L/usr/local/lff95/lib -llapack -lblas -L/usr/local/lff95/lib -lfj9i6 -lfj9e6 -lfj9f6 -lfccx86_6a /usr/local/mdsplus/lib/libMdsLib_client.a /usr/local/mdsplus/lib/libMdsIpUtil.a
+
+
+On Alpha-OSF:
+g++ -static -o pest3.2 ../ALPHA/obj/pest3_2/drive.o ../ALPHA/lib/libpest3_2.a -L/usr/ntcc/lib -li2mex -lesc -llsode -llsode_linpack -ltrxplib -ltrread -ltr_getnl -lrp_kernel -lrplot_io -lxdatmgr -linterp_sub -lxplasma -lfluxav -lsmlib -lpspline -lezcdf -lmclib -lcomput -lvaxonly -lportlib -lmdstransp /usr/local/lib/libnetcdf.a /usr/local/lib/liblapack.a /usr/local/lib/libblas.a /usr/local/mdsplus/lib/libMdsLib_client.a /usr/local/mdsplus/lib/libMdsIpUtil.a -lUfor -lfor -lFutil -lmld /usr/lib/cmplrs/as/libexc.a
