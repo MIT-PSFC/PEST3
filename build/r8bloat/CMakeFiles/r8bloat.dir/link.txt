@@ -1,0 +1,2 @@
+/usr/bin/ar qc libr8bloat.a CMakeFiles/r8bloat.dir/r8bloata0.F.o CMakeFiles/r8bloat.dir/r8bloats0.F.o CMakeFiles/r8bloat.dir/r8fpolar.f.o CMakeFiles/r8bloat.dir/r8lokjac.F.o CMakeFiles/r8bloat.dir/r8ntk.f.o CMakeFiles/r8bloat.dir/r8tkbcon.F.o CMakeFiles/r8bloat.dir/r8tkbmmc.F.o CMakeFiles/r8bloat.dir/r8tkbmry.f.o CMakeFiles/r8bloat.dir/r8tkbndr.f.o CMakeFiles/r8bloat.dir/r8tkbrad.f.o CMakeFiles/r8bloat.dir/r8tkbry2.f.o CMakeFiles/r8bloat.dir/r8tkbrys.F.o CMakeFiles/r8bloat.dir/r8tksbcon.f.o
+/usr/bin/ranlib libr8bloat.a

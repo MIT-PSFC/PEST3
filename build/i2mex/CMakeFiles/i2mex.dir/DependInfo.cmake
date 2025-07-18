@@ -1,0 +1,82 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  "Fortran"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_Fortran
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/cont_mod.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/cont_mod.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/contour.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/contour.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/delta.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/delta.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/freeqbe_mod.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/freeqbe_mod.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/gausspoints.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/gausspoints.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/getboozer.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/getboozer.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/getdelstar.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/getdelstar.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/getg.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/getg.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/getj.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/getj.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/getp.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/getp.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/getphi.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/getphi.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/getq.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/getq.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/gets.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/gets.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/getx.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/getx.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/getz.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/getz.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/glasser.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/glasser.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/graphics.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/graphics.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/i2mex_decimate.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/i2mex_decimate.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/i2mex_error.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/i2mex_error.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/i2mex_free.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/i2mex_free.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/i2mex_init.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/i2mex_init.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/i2mex_mod.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/i2mex_mod.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/i2mex_theta_orient.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/i2mex_theta_orient.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/input.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/input.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/input_geqdsk.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/input_geqdsk.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/integral.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/integral.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/integrate1d.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/integrate1d.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/interp1d.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/interp1d.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/metric.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/metric.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/mex2eqs.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/mex2eqs.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/mex2gtc.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/mex2gtc.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/original.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/original.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/output.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/output.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/parameters.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/parameters.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/poloidalremap.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/poloidalremap.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/ratsurf.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/ratsurf.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/refine.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/refine.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/save.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/save.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/scaleg.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/scaleg.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/scaleq.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/scaleq.f90.o"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex/toaxis.f90" "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build/i2mex/CMakeFiles/i2mex.dir/toaxis.f90.o"
+  )
+set(CMAKE_Fortran_COMPILER_ID "GNU")
+set(CMAKE_Fortran_SUBMODULE_SEP "@")
+set(CMAKE_Fortran_SUBMODULE_EXT ".smod")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_Fortran
+  "HAVE_CONFIG_H"
+  "__LINUX"
+  "__NOMDSPLUS"
+  )
+
+# The include file search paths:
+set(CMAKE_Fortran_TARGET_INCLUDE_PATH
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/i2mex"
+  "/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/include"
+  "ezcdf"
+  "pspline"
+  "geqdsk_mds"
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

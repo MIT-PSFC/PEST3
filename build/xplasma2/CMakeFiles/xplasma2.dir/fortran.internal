@@ -1,0 +1,21 @@
+# The fortran modules provided by this target.
+provides
+ eqi_geq_axis_data.mod
+ eqi_geq_mod.mod
+ eqi_intg_module.mod
+ eqi_rzbox_module.mod
+ eqi_vtaub_mod.mod
+ xdistrib_mod.mod
+ xplasma_avg1dmod.mod
+ xplasma_ctran.mod
+ xplasma_definitions.mod
+ xplasma_flxint.mod
+ xplasma_fromgeq.mod
+ xplasma_mcgrid.mod
+ xplasma_nclass.mod
+ xplasma_obj.mod
+ xplasma_obj_instance.mod
+ xplasma_obj_instance_mod.mod
+ xplasma_profs.mod
+ xplasma_rzgeo.mod
+ xplasma_sol.mod

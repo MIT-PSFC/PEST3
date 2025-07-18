@@ -1,0 +1,6 @@
+# The fortran modules provided by this target.
+provides
+ eq_arc_scrunch_mod.mod
+ mintrp.mod
+ scrunch_inc1.mod
+ scrunch_inc2.mod

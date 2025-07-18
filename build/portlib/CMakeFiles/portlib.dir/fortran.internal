@@ -1,0 +1,9 @@
+# The fortran modules provided by this target.
+provides
+ execsystem.mod
+ logmod.mod
+ mmpi.mod
+ mpi_env_mod.mod
+ mpi_proc_data.mod
+ mtrcons.mod
+ mtrfile.mod

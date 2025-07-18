@@ -1,0 +1,22 @@
+# The fortran modules provided by this target.
+provides
+ bzio.mod
+ combla.mod
+ comfft.mod
+ comggf.mod
+ comivi.mod
+ dims.mod
+ eigens.mod
+ hypgeo_info.mod
+ l21com.mod
+ l22com.mod
+ l34com.mod
+ mtrik1.mod
+ newmet.mod
+ nr.mod
+ nrtype.mod
+ nrutil.mod
+ ode_path.mod
+ pstcom.mod
+ r33com.mod
+ temps.mod

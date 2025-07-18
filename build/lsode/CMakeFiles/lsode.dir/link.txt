@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblsode.a CMakeFiles/lsode.dir/isize_get_lsode.c.o CMakeFiles/lsode.dir/lsode_r8.F.o CMakeFiles/lsode.dir/srcom.f.o CMakeFiles/lsode.dir/xerrwv.f.o
+/usr/bin/ranlib liblsode.a

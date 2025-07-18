@@ -1,0 +1,9 @@
+# The fortran modules provided by this target.
+provides
+ catfus_mod.mod
+ lincir_contour_mod.mod
+ namerefs.mod
+ periodic_table_mod.mod
+ plasma_hash_code.mod
+ r8bsmoo_mod.mod
+ submsg_mod.mod

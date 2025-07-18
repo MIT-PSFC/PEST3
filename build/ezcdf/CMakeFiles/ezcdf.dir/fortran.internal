@@ -1,0 +1,8 @@
+# The fortran modules provided by this target.
+provides
+ ezcdf.mod
+ ezcdf_attrib.mod
+ ezcdf_genget.mod
+ ezcdf_genput.mod
+ ezcdf_inqvar.mod
+ ezcdf_opncls.mod

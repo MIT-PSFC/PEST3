@@ -1,0 +1,35 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/smlib.dir/copyy.f.o"
+  "CMakeFiles/smlib.dir/ddrop.f.o"
+  "CMakeFiles/smlib.dir/fileps.f.o"
+  "CMakeFiles/smlib.dir/filers.f.o"
+  "CMakeFiles/smlib.dir/filfcn.f.o"
+  "CMakeFiles/smlib.dir/filfn6.f.o"
+  "CMakeFiles/smlib.dir/filter.f.o"
+  "CMakeFiles/smlib.dir/filtr6.f.o"
+  "CMakeFiles/smlib.dir/filtr90.F.o"
+  "CMakeFiles/smlib.dir/ierfcn.f.o"
+  "CMakeFiles/smlib.dir/pctran.f.o"
+  "CMakeFiles/smlib.dir/r4_qksmooth.f90.o"
+  "CMakeFiles/smlib.dir/r8_pctran.f.o"
+  "CMakeFiles/smlib.dir/r8_qksmooth.f90.o"
+  "CMakeFiles/smlib.dir/r8ddrop.f.o"
+  "CMakeFiles/smlib.dir/r8fileps.f.o"
+  "CMakeFiles/smlib.dir/r8filers.f.o"
+  "CMakeFiles/smlib.dir/r8filfn6.f.o"
+  "CMakeFiles/smlib.dir/r8filter.f.o"
+  "CMakeFiles/smlib.dir/r8filtr6.f.o"
+  "CMakeFiles/smlib.dir/r8filtr90.f.o"
+  "CMakeFiles/smlib.dir/r8ierfcn.f.o"
+  "CMakeFiles/smlib.dir/r8wxcint.f.o"
+  "CMakeFiles/smlib.dir/r8wxfint.f.o"
+  "CMakeFiles/smlib.dir/wxcint.f.o"
+  "CMakeFiles/smlib.dir/wxfint.f.o"
+  "libsmlib.a"
+  "libsmlib.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang Fortran)
+  include(CMakeFiles/smlib.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

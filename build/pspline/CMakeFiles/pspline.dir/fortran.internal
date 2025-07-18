@@ -1,0 +1,7 @@
+# The fortran modules provided by this target.
+provides
+ czspline_pointer_types.mod
+ ezspline.mod
+ ezspline_obj.mod
+ ezspline_type.mod
+ pspline_calls.mod

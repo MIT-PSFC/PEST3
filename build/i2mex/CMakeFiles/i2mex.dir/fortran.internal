@@ -1,0 +1,5 @@
+# The fortran modules provided by this target.
+provides
+ cont_mod.mod
+ freeqbe_mod.mod
+ i2mex_mod.mod

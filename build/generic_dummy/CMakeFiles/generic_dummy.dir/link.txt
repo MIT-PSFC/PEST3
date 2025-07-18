@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgeneric_dummy.a CMakeFiles/generic_dummy.dir/trread.f90.o CMakeFiles/generic_dummy.dir/trxplib.f90.o
+/usr/bin/ranlib libgeneric_dummy.a

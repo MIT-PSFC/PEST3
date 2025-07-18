@@ -1,0 +1,219 @@
+CONFIGURING pets3code with scimake in /home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build.
+CMAKE_SYSTEM_PROCESSOR = x86_64.
+SUPRA_SEARCH_PATH = /home/stubenj9/software;/internal;/volatile;/contrib;/opt;/usr/local
+scimake running on orcd-login001.mit.edu
+UQHOSTNAME = orcd-login001
+DOMAINNAME = mit.edu
+HOSTTYPE = Linux-x86_64
+hostname is orcd-login001.mit.edu
+  C_COMPILER                         = /orcd/nese/psfc/001/software/spack/2023-07-01-physics-rpp/spack/opt/spack/linux-rocky8-x86_64/gcc-12.2.0/intel-oneapi-mpi-2021.9.0-xxdsl35zf6swjol2pxado64fdirbldbs/mpi/2021.9.0/bin/mpicc
+  C_COMPILER_ID                      = GNU
+  C_VERSION                          = 12.2.0
+
+  CMake detected C implicit libraries:
+  CMAKE_C_IMPLICIT_LINK_LIBRARIES    = mpifort;mpi;rt;pthread;dl;gcc;gcc_s;c;gcc;gcc_s
+  CMAKE_C_IMPLICIT_LINK_DIRECTORIES  = /orcd/software/community/001/rocky8/intel/2024.2.1/mpi/2021.13/lib/release;/orcd/software/community/001/rocky8/intel/2024.2.1/mpi/2021.13/lib;/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib/gcc/x86_64-pc-linux-gnu/12.2.0;/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib64;/lib64;/usr/lib64;/orcd/software/community/001/rocky8/intel/2024.2.1/mpi/2021.13/opt/mpi/libfabric/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/mkl/2024.2/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/ipp/2021.12/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/ippcp/2021.12/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/compiler/2024.2/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/dnnl/2024.2/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/ccl/2021.13/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/tbb/2021.13/lib;/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib
+  Generic_FLAG                       =  
+  SSE2_FLAG                          = -msse2
+  AVX_FLAG                           = -mavx
+  AVX2_FLAG                          = -mavx2
+  AVX512_FLAG                        = -mavx512f
+  OPENMP_FLAGS                       = -fopenmp
+  CMAKE_C_FLAGS_FULL                 = -O3 -DNDEBUG -ffast-math
+  CMAKE_C_FLAGS_RELEASE              = -O3 -DNDEBUG
+  CMAKE_C_FLAGS_RELWITHDEBINFO       = -O2 -g -DNDEBUG
+  CMAKE_C_FLAGS_MINSIZEREL           = -Os -DNDEBUG
+  CMAKE_C_FLAGS_DEBUG                = -g
+  CMAKE_C_FLAGS                      = 
+  CXX_COMPILER                       = /orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/bin/g++
+  CXX_COMPILER_ID                    = GNU
+  CXX_VERSION                        = 12.2.0
+  CXX_COMP_LIB_SUBDIR                = gcc1
+
+  CMake detected C implicit libraries:
+  CMAKE_CXX_IMPLICIT_LINK_LIBRARIES  = stdc++;m;gcc_s;gcc;c;gcc_s;gcc
+  CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES= /orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib/gcc/x86_64-pc-linux-gnu/12.2.0;/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib64;/lib64;/usr/lib64;/orcd/software/community/001/rocky8/intel/2024.2.1/mpi/2021.13/opt/mpi/libfabric/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/mpi/2021.13/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/mkl/2024.2/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/ipp/2021.12/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/ippcp/2021.12/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/compiler/2024.2/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/dnnl/2024.2/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/ccl/2021.13/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/tbb/2021.13/lib;/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib
+  CMAKE_CXX_FLAGS_FULL               = -O3 -DNDEBUG -ffast-math
+  CMAKE_CXX_FLAGS_RELEASE            = -O3 -DNDEBUG
+  CMAKE_CXX_FLAGS_RELWITHDEBINFO     = -O2 -g -DNDEBUG
+  CMAKE_CXX_FLAGS_MINSIZEREL         = -Os -DNDEBUG
+  CMAKE_CXX_FLAGS_DEBUG              = -g
+  CMAKE_CXX_FLAGS                    = -pipe  -std=c++11 -Wno-deprecated-declarations -Werror=return-type
+
+CMAKE_Fortran_COMPILER_ID = 'GNU'.
+  Fortran_VERSION = 'GCC) 12.2.0'
+  Fortran_COMP_LIB_SUBDIR = gfortranGCC
+
+  CMake detected fortran implicit libraries:
+  CMAKE_Fortran_IMPLICIT_LINK_LIBRARIES= gfortran;m;gcc_s;gcc;quadmath;m;gcc_s;gcc;c;gcc_s;gcc
+  CMAKE_Fortran_IMPLICIT_LINK_DIRECTORIES= /orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib/gcc/x86_64-pc-linux-gnu/12.2.0;/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib64;/lib64;/usr/lib64;/orcd/software/community/001/rocky8/intel/2024.2.1/mpi/2021.13/opt/mpi/libfabric/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/mpi/2021.13/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/mkl/2024.2/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/ipp/2021.12/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/ippcp/2021.12/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/compiler/2024.2/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/dnnl/2024.2/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/ccl/2021.13/lib;/orcd/software/community/001/rocky8/intel/2024.2.1/tbb/2021.13/lib;/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib
+
+  RESULTS FOR fortran implicit libraries:
+  Fortran_IMPLICIT_LIBRARIES         = /orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib64/libgfortran.so;/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib64/libgcc_s.so;/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib/gcc/x86_64-pc-linux-gnu/12.2.0/libgcc.a;/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib64/libquadmath.so
+  Fortran_IMPLICIT_LIBRARY_NAMES     = gfortran;gcc_s;gcc;quadmath
+  Fortran_IMPLICIT_LIBRARY_DIRS      = /orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib64;/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib/gcc/x86_64-pc-linux-gnu/12.2.0
+  Fortran_IMPLICIT_STLIBS            = /orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib64/libgfortran.a;/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib64/libgcc_s.so;/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib/gcc/x86_64-pc-linux-gnu/12.2.0/libgcc.a;/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib64/libquadmath.a
+  Fortran_IMPLICIT_LIBFLAGS          = 
+  Fortran_IGNORED_LIBRARIES          = m;m;c
+  Fortran_COMPILER_NAME              = mpif90
+  SCI_FC_MODULENAME_CAPITALIZED      = FALSE
+  SCI_FC_MODULE_SUFFIX               = mod
+  CMAKE_Fortran_FLAGS_FULL           = -fPIC -O3
+  CMAKE_Fortran_FLAGS_RELEASE        = -fPIC -O3
+  CMAKE_Fortran_FLAGS_RELWITHDEBINFO = -O2 -g -DNDEBUG
+  CMAKE_Fortran_FLAGS_DEBUG          = -fPIC -O0 -g -Wp,-DDEBUG
+  CMAKE_Fortran_FLAGS                =  -pipe 
+
+ Optimization checking 
+  SSE2_COMPILES                      = 1
+  SSE2_RUNS                          = 1
+  AVX_COMPILES                       = 1
+  AVX_RUNS                           = 1
+  AVX2_COMPILES                      = 1
+  AVX2_RUNS                          = 1
+  AVX512_COMPILES                    = 1
+  AVX512_RUNS                        = 1
+  SCI_MOST_POWERFUL_ISA              = AVX512
+After analyzing vector and thread capabilities:
+  CMAKE_C_FLAGS_FULL                 = -O3 -DNDEBUG -ffast-math -mavx512f
+  CMAKE_C_FLAGS_RELEASE              = -O3 -DNDEBUG -msse2
+  CMAKE_C_FLAGS_RELWITHDEBINFO       = -O2 -g -DNDEBUG -msse2
+  CMAKE_C_FLAGS_MINSIZEREL           = -Os -DNDEBUG -msse2
+  CMAKE_C_FLAGS_DEBUG                = -g
+  CMAKE_C_FLAGS                      = 
+  CMAKE_CXX_FLAGS_FULL               = -O3 -DNDEBUG -ffast-math -mavx512f
+  CMAKE_CXX_FLAGS_RELEASE            = -O3 -DNDEBUG -msse2
+  CMAKE_CXX_FLAGS_RELWITHDEBINFO     = -O2 -g -DNDEBUG -msse2
+  CMAKE_CXX_FLAGS_MINSIZEREL         = -Os -DNDEBUG -msse2
+  CMAKE_CXX_FLAGS_DEBUG              = -g
+  CMAKE_CXX_FLAGS                    = -pipe  -std=c++11 -Wno-deprecated-declarations -Werror=return-type
+
+Building multiarch kernels for minimal set of ISAs
+  SCI_MULTIARCH_INSTRUCTION_SETS     = Generic;AVX512
+  SCI_MULTI_ARCH_C_FLAGS             = -O3 -DNDEBUG -ffast-math  512f
+  SCI_MULTI_ARCH_CXX_FLAGS           = -O3 -DNDEBUG -ffast-math  512f
+  GLIBC_VERSION                      = 2.28
+  CMAKE_EXE_LINKER_FLAGS_FULL        = 
+  CMAKE_EXE_LINKER_FLAGS_RELEASE     = 
+  CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO= 
+  CMAKE_EXE_LINKER_FLAGS_MINSIZEREL  = 
+  CMAKE_EXE_LINKER_FLAGS_DEBUG       = 
+  CMAKE_EXE_LINKER_FLAGS             =  -Wl,-rpath,/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib64
+  CMAKE_SHARED_LINKER_FLAGS_FULL     = 
+  CMAKE_SHARED_LINKER_FLAGS_RELEASE  = 
+  CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO= 
+  CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL= 
+  CMAKE_SHARED_LINKER_FLAGS_DEBUG    = 
+  CMAKE_SHARED_LINKER_FLAGS          =  -Wl,-rpath,/orcd/software/core/001/spack/pkg/gcc/12.2.0/yt6vabm/lib64
+
+RESULTS FOR Mdsplus:
+  Mdsplus_ROOT_DIR                   = 
+  Mdsplus_CONFIG_CMAKE               = 
+  Mdsplus_CONFIG_VERSION_CMAKE       = 
+  Mdsplus_PROGRAMS                   = 
+  Mdsplus_FILES                      = 
+  Mdsplus_INCLUDE_DIRS               = 
+  Mdsplus_MODULE_DIRS                = 
+  Mdsplus_LIBFLAGS                   = 
+  Mdsplus_LIBRARY_DIRS               = 
+  Mdsplus_LIBRARY_NAMES              = 
+  Mdsplus_LIBRARIES                  = 
+  Mdsplus_PLUGINS                    = 
+  Mdsplus_STLIBS                     = 
+  Mdsplus_DEFINITIONS                = 
+
+RESULTS FOR Doxygen:
+  Doxygen_ROOT_DIR                   = 
+  Doxygen_CONFIG_CMAKE               = 
+  Doxygen_CONFIG_VERSION_CMAKE       = 
+  Doxygen_PROGRAMS                   = 
+  Doxygen_FILES                      = 
+  Doxygen_INCLUDE_DIRS               = 
+  Doxygen_MODULE_DIRS                = 
+  Doxygen_LIBFLAGS                   = 
+  Doxygen_LIBRARY_DIRS               = 
+  Doxygen_LIBRARY_NAMES              = 
+  Doxygen_LIBRARIES                  = 
+  Doxygen_PLUGINS                    = 
+  Doxygen_STLIBS                     = 
+  Doxygen_DEFINITIONS                = 
+
+RESULTS FOR Hdf5:
+  Hdf5_ROOT_DIR                      = /orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v
+  Hdf5_CONFIG_CMAKE                  = /orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/cmake/hdf5-config.cmake
+  Hdf5_CONFIG_VERSION_CMAKE          = /orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/cmake/hdf5-config-version.cmake
+  Hdf5_PROGRAMS                      = /orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/bin/h5diff;/orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/bin/h5diff-shared;/orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/bin/h5ls;/orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/bin/h5ls-shared
+  Hdf5_FILES                         = 
+  Hdf5_INCLUDE_DIRS                  = /orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/include
+  Hdf5_MODULE_DIRS                   = /orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/include
+  Hdf5_LIBFLAGS                      = 
+  Hdf5_LIBRARY_DIRS                  = /orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/lib
+  Hdf5_LIBRARY_NAMES                 = hdf5_tools;hdf5_hl_fortran;hdf5_hl_f90cstub;hdf5_fortran;hdf5_f90cstub;hdf5_hl;hdf5
+  Hdf5_LIBRARIES                     = /orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/lib/libhdf5_tools.so;/orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/lib/libhdf5_hl_fortran.so;/orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/lib/libhdf5_hl_f90cstub.so;/orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/lib/libhdf5_fortran.so;/orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/lib/libhdf5_f90cstub.so;/orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/lib/libhdf5_hl.so;/orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/lib/libhdf5.so
+  Hdf5_PLUGINS                       = 
+  Hdf5_STLIBS                        = /orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/lib/libhdf5_tools.a;/orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/lib/libhdf5_hl_fortran.a;/orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/lib/libhdf5_hl_f90cstub.a;/orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/lib/libhdf5_fortran.a;/orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/lib/libhdf5_f90cstub.a;/orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/lib/libhdf5_hl.a;/orcd/software/community/001/spack/pkg/hdf5/1.14.3/suffu3v/lib/libhdf5.a
+  Hdf5_DEFINITIONS                   = 
+
+RESULTS FOR Z:
+  Z_ROOT_DIR                         = 
+  Z_CONFIG_CMAKE                     = 
+  Z_CONFIG_VERSION_CMAKE             = 
+  Z_PROGRAMS                         = 
+  Z_FILES                            = 
+  Z_INCLUDE_DIRS                     = 
+  Z_MODULE_DIRS                      = 
+  Z_LIBFLAGS                         = 
+  Z_LIBRARY_DIRS                     = /usr/lib64
+  Z_LIBRARY_NAMES                    = z
+  Z_LIBRARIES                        = /usr/lib64/libz.so
+  Z_PLUGINS                          = 
+  Z_STLIBS                           = /usr/lib64/libz.so
+  Z_DEFINITIONS                      = 
+
+RESULTS FOR Netcdf:
+  Netcdf_ROOT_DIR                    = 
+  Netcdf_CONFIG_CMAKE                = 
+  Netcdf_CONFIG_VERSION_CMAKE        = 
+  Netcdf_PROGRAMS                    = 
+  Netcdf_FILES                       = 
+  Netcdf_INCLUDE_DIRS                = /orcd/software/community/001/spack/pkg/netcdf-c/4.9.2/2uroesk/include
+  Netcdf_MODULE_DIRS                 = /orcd/software/community/001/spack/pkg/netcdf-fortran/4.6.1/gxllmsl/include
+  Netcdf_LIBFLAGS                    = 
+  Netcdf_LIBRARY_DIRS                = /orcd/software/community/001/spack/pkg/netcdf-fortran/4.6.1/gxllmsl/lib;/orcd/software/community/001/spack/pkg/netcdf-c/4.9.2/2uroesk/lib
+  Netcdf_LIBRARY_NAMES               = netcdff;netcdf
+  Netcdf_LIBRARIES                   = /orcd/software/community/001/spack/pkg/netcdf-fortran/4.6.1/gxllmsl/lib/libnetcdff.so;/orcd/software/community/001/spack/pkg/netcdf-c/4.9.2/2uroesk/lib/libnetcdf.so
+  Netcdf_PLUGINS                     = 
+  Netcdf_STLIBS                      = /orcd/software/community/001/spack/pkg/netcdf-fortran/4.6.1/gxllmsl/lib/libnetcdff.a;/orcd/software/community/001/spack/pkg/netcdf-c/4.9.2/2uroesk/lib/libnetcdf.a
+  Netcdf_DEFINITIONS                 = 
+
+RESULTS FOR LAPACK:
+  LAPACK_ROOT_DIR                    = 
+  LAPACK_CONFIG_CMAKE                = 
+  LAPACK_CONFIG_VERSION_CMAKE        = 
+  LAPACK_PROGRAMS                    = 
+  LAPACK_FILES                       = 
+  LAPACK_INCLUDE_DIRS                = 
+  LAPACK_MODULE_DIRS                 = 
+  LAPACK_LIBFLAGS                    = 
+  LAPACK_LIBRARY_DIRS                = 
+  LAPACK_LIBRARY_NAMES               = lapack
+  LAPACK_LIBRARIES                   = /orcd/software/core/001/spack/pkg/netlib-lapack/3.10.1/cey2bc6/lib64/liblapack.so
+  LAPACK_PLUGINS                     = 
+  LAPACK_STLIBS                      = /orcd/software/core/001/spack/pkg/netlib-lapack/3.10.1/cey2bc6/lib64/liblapack.so
+  LAPACK_DEFINITIONS                 = 
+
+RESULTS FOR BLAS:
+  BLAS_ROOT_DIR                      = 
+  BLAS_CONFIG_CMAKE                  = 
+  BLAS_CONFIG_VERSION_CMAKE          = 
+  BLAS_PROGRAMS                      = 
+  BLAS_FILES                         = 
+  BLAS_INCLUDE_DIRS                  = 
+  BLAS_MODULE_DIRS                   = 
+  BLAS_LIBFLAGS                      = 
+  BLAS_LIBRARY_DIRS                  = 
+  BLAS_LIBRARY_NAMES                 = blas
+  BLAS_LIBRARIES                     = /orcd/software/core/001/spack/pkg/netlib-lapack/3.10.1/cey2bc6/lib64/libblas.so
+  BLAS_PLUGINS                       = 
+  BLAS_STLIBS                        = /orcd/software/core/001/spack/pkg/netlib-lapack/3.10.1/cey2bc6/lib64/libblas.so
+  BLAS_DEFINITIONS                   = 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgeqdsk_mds.a CMakeFiles/geqdsk_mds.dir/cgeq_paths.f90.o CMakeFiles/geqdsk_mds.dir/geqdsk_aux.f90.o CMakeFiles/geqdsk_mds.dir/geqdsk_index1_sub.f90.o CMakeFiles/geqdsk_mds.dir/geqdsk_index_mod.f90.o CMakeFiles/geqdsk_mds.dir/geqdsk_lunmsg.f90.o CMakeFiles/geqdsk_mds.dir/geqdsk_mod.F90.o CMakeFiles/geqdsk_mds.dir/geqdsk_subs.f90.o
+/usr/bin/ranlib libgeqdsk_mds.a

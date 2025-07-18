@@ -1,0 +1,6 @@
+# The fortran modules provided by this target.
+provides
+ cgeq_paths.mod
+ geqdsk_aux.mod
+ geqdsk_index_mod.mod
+ geqdsk_mod.mod

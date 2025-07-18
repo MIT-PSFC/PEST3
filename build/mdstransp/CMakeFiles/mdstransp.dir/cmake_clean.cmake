@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/mdstransp.dir/f_mdscacheconnect.F90.o"
+  "CMakeFiles/mdstransp.dir/find_image_symbol.F.o"
+  "CMakeFiles/mdstransp.dir/idescr_short.F.o"
+  "CMakeFiles/mdstransp.dir/lmds_errstat.f90.o"
+  "CMakeFiles/mdstransp.dir/mds__copywnull.f.o"
+  "CMakeFiles/mdstransp.dir/mds__leniftrim.f.o"
+  "CMakeFiles/mdstransp.dir/mds__short.c.o"
+  "CMakeFiles/mdstransp.dir/mds__short.c.o.d"
+  "CMakeFiles/mdstransp.dir/mds_add_node.F.o"
+  "CMakeFiles/mdstransp.dir/mds_add_tag.F.o"
+  "CMakeFiles/mdstransp.dir/mds_addblanks.f.o"
+  "CMakeFiles/mdstransp.dir/mds_close.F.o"
+  "CMakeFiles/mdstransp.dir/mds_create_node.F.o"
+  "CMakeFiles/mdstransp.dir/mds_delete_node.F.o"
+  "CMakeFiles/mdstransp.dir/mds_descr_dum1.c.o"
+  "CMakeFiles/mdstransp.dir/mds_descr_dum1.c.o.d"
+  "CMakeFiles/mdstransp.dir/mds_dummy.c.o"
+  "CMakeFiles/mdstransp.dir/mds_dummy.c.o.d"
+  "CMakeFiles/mdstransp.dir/mds_errstr.F.o"
+  "CMakeFiles/mdstransp.dir/mds_open.F.o"
+  "CMakeFiles/mdstransp.dir/mds_put.F.o"
+  "CMakeFiles/mdstransp.dir/mds_put1d.F.o"
+  "CMakeFiles/mdstransp.dir/mds_put2d.F.o"
+  "CMakeFiles/mdstransp.dir/mds_put3d.F.o"
+  "CMakeFiles/mdstransp.dir/mds_remove_tag.F.o"
+  "CMakeFiles/mdstransp.dir/mds_setserver.F.o"
+  "CMakeFiles/mdstransp.dir/mds_value.F.o"
+  "CMakeFiles/mdstransp.dir/mdscacheconnect.c.o"
+  "CMakeFiles/mdstransp.dir/mdscacheconnect.c.o.d"
+  "CMakeFiles/mdstransp.dir/mdserr.f.o"
+  "CMakeFiles/mdstransp.dir/mdsfconnect.c.o"
+  "CMakeFiles/mdstransp.dir/mdsfconnect.c.o.d"
+  "CMakeFiles/mdstransp.dir/mdssetsocket_dum1.c.o"
+  "CMakeFiles/mdstransp.dir/mdssetsocket_dum1.c.o.d"
+  "libmdstransp.a"
+  "libmdstransp.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C Fortran)
+  include(CMakeFiles/mdstransp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
