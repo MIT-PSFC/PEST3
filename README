@@ -1,4 +1,8 @@
-LOCAL PSFC COPY OF PUBLICLY AVAILABLE REPO: https://svn.code.sf.net/p/pest3code/code/
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+DISCLAIMER: Local PSFC copy of publicly available repo @ https://svn.code.sf.net/p/pest3code/code/
+  For more information on this code, see https://w3.pppl.gov/ntcc/PEST3/ 
+  For PEST3 in OMFIT, see https://omfit.io/modules/mod_PEST3.html
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 PEST 3 code 
 ===========
