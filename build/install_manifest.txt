@@ -1,3 +1,0 @@
-/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build2/INCLUDE/CUCCCC.inc
-/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build2/INCLUDE/mapper.hh
-/home/stubenj9/ROCK/PEST3/PEST3_OMFIT_BUILD/pest3code/code/build2/INCLUDE/pest3.hh
