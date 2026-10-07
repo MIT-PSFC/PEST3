@@ -5,6 +5,7 @@ subroutine pstWresult
   USE pstcom
   USE newmet
   USE comggf
+  USE l22com, ONLY: vacmat, vacmti
 
   USE ezcdf
   implicit none
@@ -31,6 +32,14 @@ subroutine pstWresult
   call cdfDefVar(cdfid, "mp", dimlens, xint)
   call cdfDefVar(cdfid, "mth1", dimlens, xint)
   call cdfDefVar(cdfid, "nIdealInstabilities", dimlens, xint)
+  call cdfDefVar(cdfid, "vacuum_source", dimlens, xint) ! 0 pest3, 1 gpec
+  call cdfDefVar(cdfid, "mthvac", dimlens, xint)
+  if (.not. wall) then
+     dimlens = (/ jmax1, jmax1, 1 /)
+     call cdfDefVar(cdfid, "vacmat", dimlens, xr8)
+     call cdfDefVar(cdfid, "vacmti", dimlens, xr8)
+     dimlens = (/ 1, 1, 1 /)
+  endif
 
   ! geometry
   call cdfDefVar(cdfid, "inverseAspectRatio", dimlens, xr8)
@@ -144,6 +153,12 @@ subroutine pstWresult
   call cdfPutVar(cdfid, "mp", mp)
   call cdfPutVar(cdfid, "mth1", mth1)
   call cdfPutVar(cdfid, "nIdealInstabilities", nIdealInstabilities)
+  call cdfPutVar(cdfid, "vacuum_source", merge(1, 0, lgpecvac))
+  call cdfPutVar(cdfid, "mthvac", mthvac)
+  if (.not. wall) then
+     call cdfPutVar(cdfid, "vacmat", vacmat(1:jmax1,1:jmax1))
+     call cdfPutVar(cdfid, "vacmti", vacmti(1:jmax1,1:jmax1))
+  endif
 
   call cdfPutVar(cdfid, "inverseAspectRatio", inverseAspectRatio)
   call cdfPutVar(cdfid, "rMagnetic", rMagnetic)

@@ -153,6 +153,18 @@ subroutine pstSetB(pb)
   if(b > 10.0) infwal = .true.
 end subroutine pstSetB
 
+subroutine pstSetGPECVAC(k)
+
+  ! Use GPEC's VACUUM with k theta points (k <= 0: native vacuum).
+
+  use pstcom
+  implicit none
+  integer, intent(in) :: k
+
+  lgpecvac = (k > 0)
+  mthvac = k
+end subroutine pstSetGPECVAC
+
 subroutine pstSetN(j)
   use pstcom
   implicit none

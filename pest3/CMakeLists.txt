@@ -58,6 +58,7 @@ fft2.f90
 fitter.f90
 free.f90
 free_mem.f90
+gpecvac.F90
 frobe3.f90
 funint.f90
 fxfu.f90
@@ -147,9 +148,33 @@ mapper.hh
 pest3.hh
 )
 
+# Optional: GPEC's VACUUM (DCON/STRIDE vacuum matrix) for the -V option.
+option(PEST3_GPEC_VACUUM "Link GPEC's VACUUM for the -V option" OFF)
+set(GPEC_DIR "" CACHE PATH "Built GPEC tree (vacuum/*.mod, deps/lib/libvac.a)")
+set(GPEC_VAC_LIBS "")
+if(PEST3_GPEC_VACUUM)
+  if(NOT EXISTS "${GPEC_DIR}/deps/lib/libvac.a" OR NOT EXISTS "${GPEC_DIR}/vacuum/vacuum_mod.mod")
+    message(FATAL_ERROR "PEST3_GPEC_VACUUM: no deps/lib/libvac.a or vacuum/vacuum_mod.mod in GPEC_DIR='${GPEC_DIR}'")
+  endif()
+  set_source_files_properties(gpecvac.F90 PROPERTIES
+    COMPILE_DEFINITIONS PEST3_GPEC_VACUUM
+    INCLUDE_DIRECTORIES "${GPEC_DIR}/vacuum;${GPEC_DIR}/equil")
+  # libvac and esc both define search_: link a copy of libvac with its own renamed.
+  set(GPEC_VAC_LIBS "${CMAKE_CURRENT_BINARY_DIR}/libvac_pest3.a")
+  add_custom_command(OUTPUT ${GPEC_VAC_LIBS}
+    COMMAND ${CMAKE_OBJCOPY} --redefine-sym search_=gpecvac_search_
+            "${GPEC_DIR}/deps/lib/libvac.a" ${GPEC_VAC_LIBS}
+    DEPENDS "${GPEC_DIR}/deps/lib/libvac.a")
+  add_custom_target(gpecvac_lib DEPENDS ${GPEC_VAC_LIBS})
+  message(STATUS "PEST3: GPEC vacuum from ${GPEC_DIR}")
+endif()
+
 add_library(pest3 ${LIB_FILES})
 add_executable(pest3x pest3x.cpp)
-target_link_libraries(pest3x pest3 
+if(PEST3_GPEC_VACUUM)
+  add_dependencies(pest3x gpecvac_lib)
+endif()
+target_link_libraries(pest3x pest3 ${GPEC_VAC_LIBS}
 i2mex old_xplasma xplasma2 geqdsk_mds pspline esc nscrunch ezcdf mdstransp r8bloat fluxav smlib comput lsode lsode_linpack vaxonly portlib generic_dummy
 ${Netcdf_netcdff_LIBRARY} ${Netcdf_netcdf_LIBRARY} ${Mdsplus_LIBRARIES} ${math_libs}
 )

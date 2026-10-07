@@ -291,6 +291,8 @@
  INTEGER	 	 	 :: im1
  INTEGER	 	 	 :: im2
  INTEGER	 	 	 :: lpmax
+ LOGICAL :: lgpecvac = .false. ! GPEC VACUUM instead of pstvacuum
+ INTEGER :: mthvac = 0         ! GPEC VACUUM theta points
 !     endcliche
  END MODULE pstcom
 

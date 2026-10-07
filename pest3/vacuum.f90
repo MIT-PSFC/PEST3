@@ -108,6 +108,7 @@
  REAL*8, dimension(:,:),allocatable :: zsource, zx , zxerr
 
  real(r8) clockwise
+ real(r8), external :: pstclockwise
 
 INTEGER,dimension(:),allocatable :: JPV, JWORK
 
@@ -182,6 +183,13 @@ INTEGER,dimension(:),allocatable :: JPV, JWORK
       if(lvacdsk) then
 !aplet  20.5_r8 .94      CALL pstvacdsk
       CALL pstvacds2
+      return
+      endif
+!
+!     GPEC VACUUM (DCON/STRIDE vacuum matrix)
+!
+      if(lgpecvac) then
+      CALL pstgpecvac
       return
       endif
 !
@@ -471,8 +479,7 @@ end if
 !
 !.....calculate the vacuum matrix.
 !
-    clockwise = +1.0_r8
-    if( (xinf(2)-xinf(1))*(zinf(2)-zinf(1)) < 0.0_r8 ) clockwise = -1.0_r8
+    clockwise = pstclockwise(xinf, zinf, mth+1)
 !
       do 300 j1 = 1, jmax1
 !

@@ -78,6 +78,7 @@
       real*8 APP
       real*8 RESIDU
       logical clockwise
+      real(r8), external :: pstclockwise
 
 
 
@@ -130,8 +131,7 @@
 !
       ishape=6
 
-      clockwise = .TRUE.
-      if( (xinf(2)-xinf(1))*(zinf(2)-zinf(1)) < 0.0_r8 ) clockwise = .FALSE.
+      clockwise = pstclockwise(xinf, zinf, mth+1) > 0.0_r8
 !
       zxpp(1) =  0._r8 
       zzpp(1) =  0._r8 

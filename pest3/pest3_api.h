@@ -473,6 +473,21 @@ void  pstgetgsaverageerror_ (double *res);
 void  pstsetuniformmesh_ (int *k);
 
 
+/** pstSetGPECVAC **/
+
+
+#if __VMS || __IBM || __RS6000 || __HP || __ABS
+#define pstsetgpecvac_ pstsetgpecvac
+#endif /* __VMS || __IBM || __RS6000 || __HP || __ABS */
+
+#ifdef __CRAY
+#define pstsetgpecvac_ PSTSETGPECVAC
+#endif /* __CRAY */
+
+/* Default assume underscore appended */
+void  pstsetgpecvac_ (int *k);
+
+
 /** pstSetB **/
 
 
